@@ -5,14 +5,13 @@
 .container.menu.text-right
   .row
     .col-md-6.nameEntry
-      %input#nameInput{type: "text", placeholder: "Add a name"}
-      %button.btn.btn-default#nameSubmit= "Submit"
+      %form
+        %input#nameInput{type: "text", placeholder: "Add a name"}
+        %button.btn.btn-default#nameSubmit= "Submit"
     .col-md-6.options.text-left
       .btn-group
         %button.btn.btn-default#draw= "Draw"
-        %button.btn.btn-default#again= "Again"
         %button.btn.btn-default#reset= "Reset"
 
 %br
 .area
-  %p= "name"

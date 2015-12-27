@@ -1,3 +1,15 @@
 // Place all the styles related to the raffle controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.menu {
+  width: 40vh;
+}
+
+.area {
+  width: 60%;
+  min-height: 30vh;
+  max-height: 60vh;
+  overflow-y: scroll;
+  margin: auto;
+  border: 2px solid black;
+}

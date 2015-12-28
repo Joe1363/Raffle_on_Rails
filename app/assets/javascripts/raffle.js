@@ -6,7 +6,7 @@ $(document).ready(function() {
     event.preventDefault();
     var name = $('#nameInput').val();
     if (name != '') {
-      $('.area').prepend('<div class="inline"><p>' + name + '</p></div>');
+      $('.area').prepend('<div class="inline"><li>' + name + '</li></div>');
       pool.push(name);
 
       $('#nameInput').val('');
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   ////reset////
   $('#reset').click(function() {
-    $('p').remove();
+    $('li').remove();
     $('#nameInput').val('');
     $('#nameInput').focus();
     pool = []
@@ -33,7 +33,7 @@ $(document).ready(function() {
     console.log(pool);
     rando = Math.floor(Math.random()*pool.length);
     win = pool[rando];
-    winner = $("p:contains(" + win + ")");
+    winner = $("li:contains(" + win + ")");
     winner.append('<span class="inline highlight"> WINNER</span>');
     console.log(pool);
     pool.splice(rando, 1);

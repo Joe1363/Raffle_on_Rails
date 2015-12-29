@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  popover();
+  popover();  //initialize popover error messages
   var pool = []
 
-  ////name submit////
+  //// name submit ////
   $('#nameSubmit').click(function() {
     event.preventDefault();
     var name = $('#nameInput').val();
@@ -12,30 +12,29 @@ $(document).ready(function() {
         pool.push(name);
         clearAndFocus();
       } else {
-        //name taken
+        // name taken //
         clearAndFocus();
         $('#nameInput').data('bs.popover').options.content = 'Name is already taken';
 
         popToggle();
       };
     } else {
-      //no name
+      // no name //
       clearAndFocus();
-      $('#nameInput').data('bs.popover').options.content = 'Name is blank';
+      $('#nameInput').data('bs.popover').options.content = "Name can't be blank";
       popToggle();
     };
   })
 
-  ////reset////
+  //// reset ////
   $('#reset').click(function() {
     $('li').remove();
     clearAndFocus()
     pool = []
     $('#draw').prop('disabled', false);
-
   })
 
-  ////draw winner////
+  //// draw winner ////
   $('#draw').click(function() {
     var rando;
     var win;
@@ -49,6 +48,7 @@ $(document).ready(function() {
     }
   })
 
+  //// functions for DRY  ////
   function clearAndFocus() {
     $('#nameInput').val('');
     $('#nameInput').focus();

@@ -1,3 +1,3 @@
 A simple raffle application made in rails.
 
-I started off following a railscast using AngularJS but ran into version incompatibility issues and other errors. At which point I thought to myself: "forget it, I'm going to make my own raffler with blackjack and ... so forth without angular." 
+I started off following a railscast making a raffle application using AngularJS but ran into version incompatibility issues and other errors. At which point I thought to myself: "forget it, I'm going to make my own raffler with blackjack and ... so forth without angular."
